@@ -1,0 +1,7 @@
+{
+    "BaseDir": "",
+    "IsDevelopment": true,
+    "Name": "Your First Mod",
+    "Project": "Custom Scenery.csproj",
+	"AssetBundleDir": "assetbundle"
+}

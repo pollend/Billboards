@@ -1,0 +1,35 @@
+﻿{
+    "Billboard Square": {
+		"model": "square",
+		"type": "deco",
+		"price": 100.,
+		"gridSubdivision": 2.,
+		"snapCenter": true,
+		"recolorable": true,
+		"recolorableOptions": {
+			"color1": "#333333"
+        }
+	},
+    "Billboard Wide": {
+		"model": "wide",
+		"type": "deco",
+		"price": 200.,
+		"gridSubdivision": 1.,
+		"snapCenter": true,
+		"recolorable": true,
+		"recolorableOptions": {
+			"color1": "#A75D3D"
+        }
+	},
+    "Billboard Long": {
+		"model": "long",
+		"type": "deco",
+		"price": 250.,
+		"gridSubdivision": 1.,
+		"snapCenter": true,
+		"recolorable": true,
+		"recolorableOptions": {
+			"color1": "#A75D3D"
+        }
+	}
+}
