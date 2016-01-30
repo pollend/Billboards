@@ -101,6 +101,7 @@
     <Compile Include="CustomScenery\Main.cs" />
     <Compile Include="CustomScenery\SceneryLoader.cs" />
     <Compile Include="CustomScenery\Billboard.cs" />
+    <Compile Include="CustomScenery\TextureScale.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

@@ -286,6 +286,25 @@ namespace Custom_Scenery.CustomScenery
 
         public byte[] Compress(byte[] data)
         {
+            Texture2D tex = new Texture2D(1, 1);
+            tex.LoadImage(data);
+
+            switch (Size)
+            {
+                case "Long":
+                    TextureScale.Bilinear(tex, 1000, 200);
+                    break;
+                case "Wide":
+                    TextureScale.Bilinear(tex, 500, 200);
+                    break;
+                case "Square":
+                    TextureScale.Bilinear(tex, 200, 200);
+                    break;
+
+            }
+
+            data = tex.EncodeToJPG();
+
             using (MemoryStream outStream = new MemoryStream())
             {
                 using (GZipStream gzipStream = new GZipStream(outStream, CompressionMode.Compress))
