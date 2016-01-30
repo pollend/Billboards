@@ -13,6 +13,8 @@ namespace Custom_Scenery.CustomScenery
         [Serialized]
         public bool Pn = false;
         [Serialized]
+        public byte[] ImageData;
+
         public string Image;
 
         public string Path { get; set; }
@@ -36,7 +38,7 @@ namespace Custom_Scenery.CustomScenery
 
             Size = gameObject.name.Split(' ').Last().Split('(').First();
             
-            if (string.IsNullOrEmpty(Image))
+            if (ImageData == null)
                 StartCoroutine(LoadRandomBanner());
             else
                 StartCoroutine(LoadImage());
@@ -118,6 +120,7 @@ namespace Custom_Scenery.CustomScenery
                 
                 Texture2D tex = new Texture2D(1, 1);
                 tex.LoadImage(www.bytes);
+                ImageData = tex.GetRawTextureData();
                 
                 SetTexture(tex);
             }
@@ -211,6 +214,16 @@ namespace Custom_Scenery.CustomScenery
 
         private void SetTexture(Texture2D tex)
         {
+            float maxHeight = 250;
+
+            float widthFactor = tex.height/maxHeight;
+
+            float newWidth = tex.width/widthFactor;
+
+            tex.Resize((int)newWidth, (int)maxHeight);
+
+            tex.Apply();
+            
             foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
             {
                 if (renderer.gameObject.name.StartsWith("Board"))
@@ -231,6 +244,15 @@ namespace Custom_Scenery.CustomScenery
             return file;
         }
 
+        public Texture2D LoadTexture()
+        {
+            Texture2D tex = new Texture2D(1, 1);
+
+            tex.LoadRawTextureData(ImageData);
+
+            return tex;
+        }
+
         public Texture2D LoadFromImage(string path)
         {
             Texture2D tex = null;
@@ -241,6 +263,8 @@ namespace Custom_Scenery.CustomScenery
                 fileData = File.ReadAllBytes(path);
                 tex = new Texture2D(2, 2);
                 tex.LoadImage(fileData);
+
+                ImageData = tex.GetRawTextureData();
             }
 
             return tex;
