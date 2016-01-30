@@ -17,23 +17,8 @@ namespace Custom_Scenery.Decorators
         {
             switch (_type)
             {
-                case "deco":
-                    (new DecoDecorator()).Decorate(go, options, assetBundle);
-                    break;
-                case "trashbin":
-                    (new TrashBinDecorator()).Decorate(go, options, assetBundle);
-                    break;
-                case "seating":
-                    (new SeatingDecorator()).Decorate(go, options, assetBundle);
-                    break;
-                case "seatingAuto":
-                    (new SeatingAutoDecorator()).Decorate(go, options, assetBundle);
-                    break;
-                case "fence":
-                    (new FenceDecorator()).Decorate(go, options, assetBundle);
-                    break;
-                case "lamp":
-                    (new LampDecorator()).Decorate(go, options, assetBundle);
+                case "billboard":
+                    (new BillboardDecorator()).Decorate(go, options, assetBundle);
                     break;
             }
         }
@@ -44,15 +29,8 @@ namespace Custom_Scenery.Decorators
 
             switch (_type)
             {
-                case "deco":
-                case "trashbin":
-                case "seating":
-                case "seatingAuto":
-                case "lamp":
+                case "billboard":
                     asset = Object.Instantiate(bundle.LoadAsset((string) options["model"])) as GameObject;
-                    break;
-                case "fence":
-                    asset = new GameObject();
                     break;
             }
 

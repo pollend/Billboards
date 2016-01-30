@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Custom_Scenery.CustomScenery;
+using Custom_Scenery.CustomScenery.Decorators;
 using Custom_Scenery.Decorators;
 using MiniJSON;
 using UnityEngine;
@@ -44,9 +46,11 @@ namespace Custom_Scenery
 
                             if (options.ContainsKey("grid"))
                                 (new GridDecorator((bool)options["grid"])).Decorate(asset, options, bundle);
-                            
+
                             if (options.ContainsKey("recolorable"))
                                 (new RecolorableDecorator((bool)options["recolorable"])).Decorate(asset, options, bundle);
+                            
+                            (new ResizeDecorator()).Decorate(asset, options, bundle);
 
                             DontDestroyOnLoad(asset);
 

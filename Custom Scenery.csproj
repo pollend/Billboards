@@ -59,6 +59,7 @@
     <None Include="scenery.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomScenery\Banner.cs" />
     <Compile Include="CustomScenery\Decorators\GridDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\GridSubdivisionDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\HeightDecorator.cs" />
@@ -66,14 +67,10 @@
     <Compile Include="CustomScenery\Decorators\NameDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\PriceDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\RecolorableDecorator.cs" />
+    <Compile Include="CustomScenery\Decorators\ResizeDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\SnapToCenterDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\TypeDecorator.cs" />
-    <Compile Include="CustomScenery\Decorators\Type\FenceDecorator.cs" />
-    <Compile Include="CustomScenery\Decorators\Type\LampDecorator.cs" />
-    <Compile Include="CustomScenery\Decorators\Type\SeatingAutoDecorator.cs" />
-    <Compile Include="CustomScenery\Decorators\Type\DecoDecorator.cs" />
-    <Compile Include="CustomScenery\Decorators\Type\SeatingDecorator.cs" />
-    <Compile Include="CustomScenery\Decorators\Type\TrashBinDecorator.cs" />
+    <Compile Include="CustomScenery\Decorators\Type\BillboardDecorator.cs" />
     <Compile Include="CustomScenery\Main.cs" />
     <Compile Include="CustomScenery\SceneryLoader.cs" />
     <Compile Include="CustomScenery\Billboard.cs" />

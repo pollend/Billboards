@@ -1,18 +1,20 @@
 ﻿{
     "Billboard Square": {
+		"size": "square",
 		"model": "square",
-		"type": "deco",
+		"type": "billboard",
 		"price": 100.,
 		"gridSubdivision": 2.,
 		"snapCenter": true,
 		"recolorable": true,
 		"recolorableOptions": {
-			"color1": "#333333"
+			"color1": "#A75D3D"
         }
 	},
     "Billboard Wide": {
+		"size": "wide",
 		"model": "wide",
-		"type": "deco",
+		"type": "billboard",
 		"price": 200.,
 		"gridSubdivision": 1.,
 		"snapCenter": true,
@@ -22,8 +24,9 @@
         }
 	},
     "Billboard Long": {
+		"size": "long",
 		"model": "long",
-		"type": "deco",
+		"type": "billboard",
 		"price": 250.,
 		"gridSubdivision": 1.,
 		"snapCenter": true,

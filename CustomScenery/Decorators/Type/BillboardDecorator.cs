@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using Custom_Scenery.CustomScenery;
 using Custom_Scenery.CustomScenery.Decorators;
 using UnityEngine;
 
 namespace Custom_Scenery.Decorators.Type
 {
-    class DecoDecorator : IDecorator
+    class BillboardDecorator : IDecorator
     {
         public void Decorate(GameObject go, Dictionary<string, object> options, AssetBundle assetBundle)
         {

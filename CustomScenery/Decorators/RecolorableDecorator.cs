@@ -71,7 +71,7 @@ namespace Custom_Scenery.Decorators
 
             foreach (Renderer render in renderCollection)
             {
-				if(render.gameObject.name.StartsWith("Mesh"))
+				if(render.gameObject.name.StartsWith("Construction"))
                 	render.sharedMaterial = material;
             }
         }
