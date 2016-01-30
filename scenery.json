@@ -6,6 +6,7 @@
 		"price": 100.,
 		"gridSubdivision": 2.,
 		"snapCenter": true,
+		"heightDelta": 0.1,
 		"recolorable": true,
 		"recolorableOptions": {
 			"color1": "#A75D3D"
@@ -18,6 +19,7 @@
 		"price": 200.,
 		"gridSubdivision": 1.,
 		"snapCenter": true,
+		"heightDelta": 0.1,
 		"recolorable": true,
 		"recolorableOptions": {
 			"color1": "#A75D3D"
@@ -30,9 +32,49 @@
 		"price": 250.,
 		"gridSubdivision": 1.,
 		"snapCenter": true,
+		"heightDelta": 0.1,
 		"recolorable": true,
 		"recolorableOptions": {
 			"color1": "#A75D3D"
+        }
+	},
+    "Banner Square": {
+		"size": "square",
+		"model": "banner square",
+		"type": "billboard",
+		"price": 100.,
+		"gridSubdivision": 2.,
+		"snapCenter": true,
+		"heightDelta": 0.1,
+		"recolorable": true,
+		"recolorableOptions": {
+			"color1": "#949494"
+        }
+	},
+    "Banner Wide": {
+		"size": "wide",
+		"model": "banner wide",
+		"type": "billboard",
+		"price": 200.,
+		"gridSubdivision": 1.,
+		"snapCenter": true,
+		"heightDelta": 0.1,
+		"recolorable": true,
+		"recolorableOptions": {
+			"color1": "#949494"
+        }
+	},
+    "Banner Long": {
+		"size": "long",
+		"model": "banner long",
+		"type": "billboard",
+		"price": 250.,
+		"gridSubdivision": 1.,
+		"snapCenter": true,
+		"heightDelta": 0.1,
+		"recolorable": true,
+		"recolorableOptions": {
+			"color1": "#949494"
         }
 	}
 }

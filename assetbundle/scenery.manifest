@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 965253977
+CRC: 1487727573
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a8cca78f94ad5c3e244abd447b534131
+    Hash: a3263191e96e4d10a46f871d805e67fa
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3e1f146a2cf85c3aba96f8d9d347d6c4
+    Hash: 20b6dbcd394f241c02d5d8d6d4450133
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -29,11 +29,18 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
 Assets:
 - Assets/Resources/logo trans.png
 - Assets/Resources/Sprites-Default.shader
 - Assets/square.prefab
 - Assets/long.prefab
+- Assets/banner wide.prefab
+- Assets/banner long.prefab
+- Assets/banner square.prefab
 - Assets/Resources/Materials/Billboard.mat
 - Assets/Resources/Materials/Recolor_Material.mat
 - Assets/wide.prefab
