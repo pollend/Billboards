@@ -145,7 +145,7 @@ namespace Custom_Scenery.CustomScenery
 
         private void OnMouseDown()
         {
-            if(!GetComponent<BuildableObject>().isPreview)
+            if(!GetComponent<BuildableObject>().isPreview && !UIUtility.isMouseOverUIElement())
                 _show = true;
         }
 
