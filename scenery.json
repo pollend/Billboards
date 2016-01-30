@@ -1,5 +1,6 @@
 ﻿{
     "Billboard Square": {
+		"category": "Billboards",
 		"size": "square",
 		"model": "square",
 		"type": "billboard",
@@ -13,6 +14,7 @@
         }
 	},
     "Billboard Wide": {
+		"category": "Billboards",
 		"size": "wide",
 		"model": "wide",
 		"type": "billboard",
@@ -26,6 +28,7 @@
         }
 	},
     "Billboard Long": {
+		"category": "Billboards",
 		"size": "long",
 		"model": "long",
 		"type": "billboard",
@@ -39,6 +42,7 @@
         }
 	},
     "Banner Square": {
+		"category": "Billboards",
 		"size": "square",
 		"model": "banner square",
 		"type": "billboard",
@@ -52,6 +56,7 @@
         }
 	},
     "Banner Wide": {
+		"category": "Billboards",
 		"size": "wide",
 		"model": "banner wide",
 		"type": "billboard",
@@ -65,6 +70,7 @@
         }
 	},
     "Banner Long": {
+		"category": "Billboards",
 		"size": "long",
 		"model": "banner long",
 		"type": "billboard",

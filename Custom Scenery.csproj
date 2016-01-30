@@ -59,9 +59,36 @@
     <None Include="scenery.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compression\BlockType.cs" />
+    <Compile Include="Compression\CompressionMode.cs" />
+    <Compile Include="Compression\CopyEncoder.cs" />
+    <Compile Include="Compression\Crc32Helper.cs" />
+    <Compile Include="Compression\DeflateInput.cs" />
+    <Compile Include="Compression\DeflaterManaged.cs" />
+    <Compile Include="Compression\DeflateStream.cs" />
+    <Compile Include="Compression\DeflateStreamAsyncResult.cs" />
+    <Compile Include="Compression\FastEncoder.cs" />
+    <Compile Include="Compression\FastEncoderStatics.cs" />
+    <Compile Include="Compression\FastEncoderWindow.cs" />
+    <Compile Include="Compression\FileFormats.cs" />
+    <Compile Include="Compression\GZipDecoder.cs" />
+    <Compile Include="Compression\GZipStream.cs" />
+    <Compile Include="Compression\GZipUtils.cs" />
+    <Compile Include="Compression\HuffmanTree.cs" />
+    <Compile Include="Compression\IDeflater.cs" />
+    <Compile Include="Compression\Inflater.cs" />
+    <Compile Include="Compression\InflaterState.cs" />
+    <Compile Include="Compression\InputBuffer.cs" />
+    <Compile Include="Compression\InvalidDataException.cs" />
+    <Compile Include="Compression\Match.cs" />
+    <Compile Include="Compression\MatchState.cs" />
+    <Compile Include="Compression\OutputBuffer.cs" />
+    <Compile Include="Compression\OutputWindow.cs" />
+    <Compile Include="Compression\SR.cs" />
     <Compile Include="CustomScenery\Banner.cs" />
     <Compile Include="CustomScenery\Decorators\GridDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\GridSubdivisionDecorator.cs" />
+    <Compile Include="CustomScenery\Decorators\GroupDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\HeightDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\IDecorator.cs" />
     <Compile Include="CustomScenery\Decorators\NameDecorator.cs" />
