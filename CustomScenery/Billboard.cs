@@ -223,11 +223,7 @@ namespace Custom_Scenery.CustomScenery
         public string LoadRandomFromDir(string dir)
         {
             string[] files = Directory.GetFiles(dir);
-
-            Debug.Log(Size);
-            Debug.Log(dir);
-            Debug.Log(files.Count());
-
+            
             int i = Mathf.Max(0, Mathf.RoundToInt(Random.value * files.Count() - 1));
         
             string file = files[i];
