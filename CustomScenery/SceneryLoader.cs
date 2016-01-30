@@ -59,7 +59,7 @@ namespace Custom_Scenery
                             billBoard.isPreview = true;
                             
                             AssetManager.Instance.registerObject(billBoard);
-                            _sceneryObjects.Add(asset.GetComponent<BillBoard>());
+                            _sceneryObjects.Add(asset.GetComponent<BuildableObject>());
                             
                             // hide it from view
                             asset.transform.parent = hider.transform;

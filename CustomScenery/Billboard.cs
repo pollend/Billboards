@@ -26,7 +26,6 @@ namespace Custom_Scenery.CustomScenery
         private GUISkin _skin;
         private bool _show;
         private Rect _windowPosition = new Rect(20, 20, 350, 320);
-        private bool _inited;
 
         public override void Start()
         {
@@ -36,24 +35,15 @@ namespace Custom_Scenery.CustomScenery
             Path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(typeof(Main)).Location).Replace("bin", ""), "");
 
             Size = gameObject.name.Split(' ').Last().Split('(').First();
-        }
+            
+            if (string.IsNullOrEmpty(Image))
+                StartCoroutine(LoadRandomBanner());
+            else
+                StartCoroutine(LoadImage());
 
-        void Update()
-        {
-            // Gameobject is inactive at Start, can't start coroutines then
-            if (gameObject.activeInHierarchy && !_inited)
-            {
-                if (string.IsNullOrEmpty(Image))
-                    StartCoroutine(LoadRandomBanner());
-                else
-                    StartCoroutine(LoadImage());
+            StartCoroutine(LoadGUISkin());
 
-                StartCoroutine(LoadGUISkin());
-
-                StartCoroutine(ReloadLocalBanners());
-
-                _inited = true;
-            }
+            StartCoroutine(ReloadLocalBanners());
         }
 
         private IEnumerator LoadGUISkin()
