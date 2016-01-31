@@ -1,7 +1,7 @@
 {
     "BaseDir": "",
     "IsDevelopment": true,
-    "Name": "Your First Mod",
+    "Name": "Billboards",
     "Project": "Custom Scenery.csproj",
 	"AssetBundleDir": "assetbundle"
 }

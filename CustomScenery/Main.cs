@@ -27,8 +27,8 @@ namespace Custom_Scenery
             Object.Destroy(_go);
         }
 
-        public string Name { get { return "Custom Scenery Pack"; } }
-        public string Description { get { return "Custom Scenery Pack"; } }
+        public string Name { get { return "Billboards"; } }
+        public string Description { get { return "Billboard Pack"; } }
         public string Path { get; set; }
         public string Identifier { get; set; }
     }
