@@ -45,7 +45,6 @@ namespace Custom_Scenery.CustomScenery
             
             if (!Directory.Exists(BannerPath))
             {
-
                 char dsc = System.IO.Path.DirectorySeparatorChar;
 
                 Directory.CreateDirectory(BannerPath);
@@ -235,8 +234,8 @@ namespace Custom_Scenery.CustomScenery
 
                         if (GUI.Button(new Rect(x * 60, y * 60, 50, 50), _banners[x + y * 5].Texture, new GUIStyle() { padding = new RectOffset(0, 0, 0, 0), border = new RectOffset(0, 0, 0, 0) }))
                         {
-                            SetTexture(_banners[x + y * 5].Texture);
                             ImageSource = _banners[x + y * 5].Source;
+                            SetTexture(LoadFromImage(ImageSource));
                         }
                     }
                 }
