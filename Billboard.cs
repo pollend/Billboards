@@ -31,25 +31,21 @@ namespace Custom_Scenery.CustomScenery
         {
             BannerPath = FilePaths.getFolderPath("Banners");
 
+            if (!string.IsNullOrEmpty(Image))
+            {
+                Texture2D tex = new Texture2D(1, 1);
+
+                byte[] image = Convert.FromBase64String(Image);
+                tex.LoadImage(image);
+
+                SetTexture(tex);
+            }
             //StartCoroutine(LoadGUISkin());
 
             StartCoroutine(ReloadLocalBanners());
         }
 
-        private void OnBecameVisible()
-        {
-            if (!string.IsNullOrEmpty(Image))
-            {
-                Texture2D tex = new Texture2D(1, 1);
-
-                byte[] image = Decompress(Convert.FromBase64String(Image));
-                tex.LoadImage(image);
-
-                SetTexture(tex);
-            }
-
-        }
-
+   
 
         private IEnumerator ReloadLocalBanners()
         {
@@ -164,73 +160,14 @@ namespace Custom_Scenery.CustomScenery
                 tex = new Texture2D(2, 2);
                 tex.LoadImage(fileData);
 
-                Image = Convert.ToBase64String(Compress(fileData));
+                Image = Convert.ToBase64String(tex.EncodeToPNG());
             }
 
             return tex;
         }
 
-        public byte[] Compress(byte[] data)
-        {
-            Texture2D tex = new Texture2D(1, 1);
-            tex.LoadRawTextureData(data);
+       
 
-           /* switch ("Square")
-            {
-                case "Long":
-                    TextureScale.Bilinear(tex, 1000, 200);
-                    break;
-                case "Wide":
-                    TextureScale.Bilinear(tex, 500, 200);
-                    break;
-                case "Square":
-                    TextureScale.Bilinear(tex, 200, 200);
-                    break;
-
-            }*/
-
-            data = tex.EncodeToPNG();
-
-            using (MemoryStream outStream = new MemoryStream())
-            {
-                using (GZipOutputStream gzipStream = new GZipOutputStream(outStream))
-                using (MemoryStream srcStream = new MemoryStream(data))
-                {
-                    CopyTo(srcStream, gzipStream);
-                    //srcStream.CopyTo(gzipStream);
-                }
-
-                return outStream.ToArray();
-            }
-        }
-
-        public byte[] Decompress(byte[] compressed)
-        {
-            using (MemoryStream inStream = new MemoryStream(compressed))
-            using (GZipInputStream gzipStream = new GZipInputStream(inStream))
-            using (MemoryStream outStream = new MemoryStream())
-            {
-                CopyTo(gzipStream, outStream);
-                //gzipStream.CopyTo(outStream);
-                return outStream.ToArray();
-            }
-        }
-
-        public void CopyTo(Stream input, Stream output)
-        {
-            byte[] buffer = new byte[4 * 1024];
-            int bytesRead;
-
-            while ((bytesRead = input.Read(buffer, 0, buffer.Length)) != 0)
-            {
-                output.Write(buffer, 0, bytesRead);
-            }
-        }
-
-        public override void serialize(SerializationContext context, Dictionary<string, object> values)
-        {
-            
-            base.serialize(context, values);
-        }
+   
     }
 }
