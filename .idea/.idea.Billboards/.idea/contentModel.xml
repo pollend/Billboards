@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.3/system/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_Billboards.931646547.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Banner.cs" t="Include" />
+      <e p="Banners" t="Include">
+        <e p="long" t="Include">
+          <e p="long.png" t="Include" />
+        </e>
+        <e p="square" t="Include">
+          <e p="square.png" t="Include" />
+        </e>
+        <e p="wide" t="Include">
+          <e p="wide.png" t="Include" />
+        </e>
+      </e>
+      <e p="Billboard.cs" t="Include" />
+      <e p="Billboards.csproj" t="IncludeRecursive" />
+      <e p="Billboards.sln" t="IncludeFlat" />
+      <e p="Decorators" t="Include">
+        <e p="BillboardDecorator.cs" t="Include" />
+        <e p="CustomColorDecorator.cs" t="Include" />
+        <e p="IDecorator.cs" t="Include" />
+        <e p="LightEffectsDecorator.cs" t="Include" />
+        <e p="MaterialDecorator.cs" t="Include" />
+      </e>
+      <e p="Main.cs" t="Include" />
+      <e p="TextureScale.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$PROJECT_DIR$/../pollend@Billboards" t="ExcludeRecursive" />
+  </component>
+</project>
