@@ -25,6 +25,8 @@
         <e p="LightEffectsDecorator.cs" t="Include" />
         <e p="MaterialDecorator.cs" t="Include" />
       </e>
+      <e p="FileBrowser.cs" t="Include" />
+      <e p="GUILayoutx.cs" t="Include" />
       <e p="Main.cs" t="Include" />
       <e p="TextureScale.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />

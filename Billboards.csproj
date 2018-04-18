@@ -98,6 +98,8 @@
     <Compile Include="Decorators\IDecorator.cs" />
     <Compile Include="Decorators\LightEffectsDecorator.cs" />
     <Compile Include="Decorators\MaterialDecorator.cs" />
+    <Compile Include="FileBrowser.cs" />
+    <Compile Include="GUILayoutx.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="TextureScale.cs" />
   </ItemGroup>

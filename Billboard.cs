@@ -26,9 +26,18 @@ namespace Custom_Scenery.CustomScenery
         private Vector2 _scrollPosition = Vector2.zero;
         private bool _show;
         private Rect _windowPosition = new Rect(20, 20, 350, 320);
+        protected FileBrowser fileBrowser; 
 
+        protected void FileSelectedCallback(string path) {
+         
+        }
+    
         private void Start()
         {
+            fileBrowser = new FileBrowser(new Rect(100, 100, 600, 500),
+                "Choose Text File",
+                FileSelectedCallback);
+            
             BannerPath = FilePaths.getFolderPath("Banners");
 
             if (!string.IsNullOrEmpty(Image))
@@ -82,6 +91,8 @@ namespace Custom_Scenery.CustomScenery
 
             if (_show)
             {
+                fileBrowser.OnGUI();
+
                 _windowPosition = GUI.Window(Mathf.RoundToInt(transform.position.x * transform.position.z),
                     _windowPosition, BillboardWindow, "Billboard");
 
@@ -94,7 +105,10 @@ namespace Custom_Scenery.CustomScenery
 
         private void BillboardWindow(int windowID)
         {
-            GUI.DragWindow(new Rect(0, 0, 310, 30));
+            
+          /*  GUI.DragWindow(new Rect(0, 0, 310, 30));
+            
+            
             if (GUI.Button(new Rect(320, 5, 20, 20), "x"))
             {
                 _show = false;
@@ -123,7 +137,8 @@ namespace Custom_Scenery.CustomScenery
                 }
             }
 
-            GUI.EndScrollView();
+            GUI.EndScrollView();*/
+            
 
         }
 
